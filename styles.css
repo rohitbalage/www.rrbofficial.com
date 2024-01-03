@@ -16,21 +16,29 @@
   
   /* Change the color of links on hover */
   .topnav a:hover {
-    background-color: #ddd;
+    background-color: greenyellow;
     color: black;
   }
   
   /* Add a color to the active/current link */
   .topnav a.active {
-    background-color: #04AA6D;
-    color: white;
+    background-color: greenyellow;
+    color: black;
   }
 
   * {
     box-sizing: border-box;
   }
   
- 
+  h6 {
+    color: white;
+  }
+  h5 {
+    color: white;
+  }
+  p {
+    color: white;
+  }
 
 
   introdcution {
@@ -42,10 +50,10 @@
   }
 
   footer {
-    background-color: #777;
+    background-color: greenyellow;
     padding: 10px;
     text-align: center;
-    color: white;
+    color: black;
   }
 
   nav {
@@ -58,11 +66,11 @@
 
   /* Style the header */
 header {
-  background-color: #666;
+  background-color: greenyellow;
   padding: 30px;
   text-align: center;
   font-size: 35px;
-  color: white;
+  color: black;
 }
 
 /* Create two columns/boxes that floats next to each other */
