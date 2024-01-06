@@ -1,23 +1,212 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Projects</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
+  <style>
+    body {
+      background-color: #000; /* Set your desired background color */
+    }
+
+    .page-header, .page-footer {
+      text-align: center;
+      color: greenyellow; /* Set the header and footer text color to greenyellow */
+      background-color: #000; /* Set the header and footer background color to black */
+      padding: 20px 0; /* Add padding above and below the header/footer */
+    }
+
+    .footer-nav {
+      display: flex;
+      justify-content: center;
+    }
+
+    .footer-nav a {
+      color: greenyellow;
+      margin: 0 15px;
+      text-decoration: none;
+    }
+
+    .footer-nav a:hover {
+      text-decoration: underline;
+    }
+
+    .card-container {
+      padding-top: 20px; /* Add padding between the header and cards */
+    }
+
+    .card {
+      background-color: #000;
+      color: #fff;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      margin-right: 15px; /* Adjust the margin-right for increased padding between cards */
+      position: relative;
+    }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      box-shadow: 0 4px 8px rgba(255, 255, 255, 0.5); /* White box-shadow */
+      border-radius: 10px;
+      z-index: -1;
+    }
+    .github-link {
+    color: #000 !important; 
+    font-weight: bold; /* Set the font color to black */
+  }
+  
+    .row {
+    margin-bottom: 20px; /* Add margin-bottom for padding between two rows of cards */
+  }
+
+  .card {
+    /* Existing styles... */
+    margin-bottom: 50px; /* Add margin-bottom for padding between two rows of cards */
+  }
+    .card-title {
+      color: #6aff6a; /* Set your desired font color */
+    }
+
+    .card-text {
+      color: #ccc; /* Set your desired font color */
+    }
+
+    .btn-primary {
+      background-color: greenyellow !important; /* Set your desired button color */
+      border-color: greenyellow !important;
+    }
+  </style>
+
+  <title>Your Card View</title>
 </head>
-<link rel=" stylesheet" href="styles.css">
+<body>
 
-<body style="background-color:black;">
-<header>
-  <h2>Projects</h2>
-</header>
+<div class="container mt-4">
+  <div class="page-header">
+    <h1>Projects</h1>
+  </div>
+  
+  <div class="card-container">
+    <div class="row">
+
+      <!-- Card 1 -->
+      <div class="col-md-3">
+        <div class="card">
+          <img src="images/projects/project1.jpg" class="card-img-top" alt="Project 1 Image">
+          <div class="card-body">
+            <h5 class="card-title">Project 1</h5>
+            <p class="card-text">Description for Project 1. Keep it short and sweet.</p>
+            <a href="project_details.html" class="btn btn-primary github-link" target="_blank">View</a>
+          </div>
+        </div>
+      </div>
+
+       <!-- Card 1 -->
+       <div class="col-md-3">
+        <div class="card">
+          <img src="images/projects/project1.jpg" class="card-img-top" alt="Project 1 Image">
+          <div class="card-body">
+            <h5 class="card-title">Project 1</h5>
+            <p class="card-text">Description for Project 1. Keep it short and sweet.</p>
+            <a href="project_details.html" class="btn btn-primary github-link" target="_blank">View</a>
+          </div>
+        </div>
+      </div>
+
+       <!-- Card 1 -->
+       <div class="col-md-3">
+        <div class="card">
+          <img src="images/projects/project1.jpg" class="card-img-top" alt="Project 1 Image">
+          <div class="card-body">
+            <h5 class="card-title">Project 1</h5>
+            <p class="card-text">Description for Project 1. Keep it short and sweet.</p>
+<a href="project_details.html" class="btn btn-primary github-link" target="_blank">View</a>
+          </div>
+        </div>
+      </div>
 
 
+       <!-- Card 1 -->
+       <div class="col-md-3">
+        <div class="card">
+          <img src="images/projects/project1.jpg" class="card-img-top" alt="Project 1 Image">
+          <div class="card-body">
+            <h5 class="card-title">Project 1</h5>
+            <p class="card-text">Description for Project 1. Keep it short and sweet.</p>
+<a href="https://github.com/yourusername/project1" class="btn btn-primary github-link" target="_blank">View</a>
+          </div>
+        </div>
+      </div>
 
-<footer>
-  <p>Footer</p>
-</footer>
+       <!-- Card 1 -->
+       <div class="col-md-3">
+        <div class="card">
+          <img src="images/projects/project1.jpg" class="card-img-top" alt="Project 1 Image">
+          <div class="card-body">
+            <h5 class="card-title">Project 1</h5>
+            <p class="card-text">Description for Project 1. Keep it short and sweet.</p>
+<a href="https://github.com/yourusername/project1" class="btn btn-primary github-link" target="_blank">View</a>
+          </div>
+        </div>
+      </div>
+
+       <!-- Card 1 -->
+       <div class="col-md-3">
+        <div class="card">
+          <img src="images/projects/project1.jpg" class="card-img-top" alt="Project 1 Image">
+          <div class="card-body">
+            <h5 class="card-title">Project 1</h5>
+            <p class="card-text">Description for Project 1. Keep it short and sweet.</p>
+            <a href="https://github.com/yourusername/project1" class="btn btn-primary github-link" target="_blank">View</a>
+          </div>
+        </div>
+      </div>
+
+      
+       <!-- Card 1 -->
+       <div class="col-md-3">
+        <div class="card">
+          <img src="images/projects/project1.jpg" class="card-img-top" alt="Project 1 Image">
+          <div class="card-body">
+            <h5 class="card-title">Project 1</h5>
+            <p class="card-text">Description for Project 1. Keep it short and sweet.</p>
+<a href="projectdetails." class="btn btn-primary github-link" target="_blank">View</a>
+          </div>
+        </div>
+      </div>
+       <!-- Card 1 -->
+       <div class="col-md-3">
+        <div class="card">
+          <img src="images/projects/project1.jpg" class="card-img-top" alt="Project 1 Image">
+          <div class="card-body">
+            <h5 class="card-title">Project 1</h5>
+            <p class="card-text">Description for Project 1. Keep it short and sweet.</p>
+            <a href="project_details.html" class="btn btn-primary github-link" target="_blank">View</a>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- ... (Repeat for other cards) ... -->
+
+    </div>
+  </div>
+
+</div>
+
+<div class="page-footer">
+  <nav class="footer-nav">
+    <a href="index.html">Home</a>
+    <a href="https://github.com/">GitHub</a>
+    <a href="https://play.google.com/">Playstore</a>
+  </nav>
+</div>
 
 </body>
 </html>
