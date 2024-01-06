@@ -1,29 +1,212 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>CSS Template</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel=" stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="description" content="Hall of Fame">
+    <meta name="keywords" content="Hall of Fame, Achievements, RRBofficial">
+    <meta name="author" content="Rohit Balage">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+
+    <title>Hall of Fame</title>
+
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .topnav {
+            overflow: hidden;
+            background-color: #000;
+            position: fixed;
+            width: 100%;
+            z-index: 1;
+        }
+
+        .topnav a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .topnav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .page-header {
+            text-align: center;
+            color: greenyellow;
+            background-color: #000;
+            padding: 20px 0;
+        }
+
+        .project-cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .card {
+            background-color: #000;
+            color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(255, 255, 255, 0.5);
+            width: calc(25% - 20px);
+            position: relative;
+            height: 300px;
+            cursor: pointer;
+            overflow: hidden;
+        }
+
+        .popup button {
+            background-color: greenyellow;
+            color: #000;
+            padding: 12px;
+            border: none;
+            border-radius: 4px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        .popup button:hover {
+            background-color: yellowgreen;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            z-index: -1;
+        }
+
+        .card-title {
+            color: #6aff6a;
+            font-size: 18px;
+            text-align: center;
+            padding-top: 10px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+            width: 100%;
+        }
+
+        .card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            justify-content: center;
+            align-items: center;
+            z-index: 2;
+        }
+
+        .popup-content {
+            background-color: #111;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(255, 255, 255, 0.5);
+            text-align: center;
+            position: relative;
+        }
+
+        .popup img {
+            max-width: 80%;
+            max-height: 80%;
+            border-radius: 8px;
+            margin-top: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        .popup p {
+            color: #6aff6a;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
 
-<header>
-  <h2>Hall of Fame</h2>
-</header>
+<div class="topnav">
+    <a href="index.html">Home</a>
+    <a href="https://github.com/rohitbalage">GitHub</a>
+    <a href="https://www.linkedin.com/in/rohitbalage/">LinkedIn</a>
+</div>
 
-<section>
-  <nav>
-  </nav>
-  
-  <article>
-    
-  </article>
-</section>
+<div class="page-header">
+    <h1>Hall of Fame</h1>
+</div>
 
-<footer>
-  <p>Footer</p>
-</footer>
+<div class="project-cards">
+    <div class="card" onclick="showPopup('Achievement 1 description')">
+        <img src="halloffame/college.jpg" alt="Achievement 1">
+        <div class="card-title">Achievement 1</div>
+    </div>
+    <div class="card" onclick="showPopup('Achievement 2 description')">
+        <img src="halloffame/college.jpg" alt="Achievement 2">
+        <div class="card-title">Achievement 2</div>
+    </div>
+    <div class="card" onclick="showPopup('Achievement 3 description')">
+        <img src="halloffame/college.jpg" alt="Achievement 3">
+        <div class="card-title">Achievement 3</div>
+    </div>
+    <div class="card" onclick="showPopup('Achievement 4 description')">
+        <img src="halloffame/college.jpg" alt="Achievement 4">
+        <div class="card-title">Achievement 4</div>
+    </div>
+    <!-- Add more cards as needed -->
+</div>
+
+<div class="popup" id="popup">
+    <div class="popup-content">
+        <button onclick="closePopup()">Close</button>
+        <img src="" alt="Popup Image">
+        <p id="popupText"></p>
+    </div>
+</div>
+
+<script>
+    function showPopup(description) {
+        var popup = document.getElementById("popup");
+        var popupText = document.getElementById("popupText");
+        var popupImage = document.querySelector(".popup img");
+
+        popupText.innerHTML = description;
+        popupImage.src = event.target.src;
+        popup.style.display = "flex";
+    }
+
+    function closePopup() {
+        var popup = document.getElementById("popup");
+        popup.style.display = "none";
+    }
+</script>
 
 </body>
 </html>
