@@ -21,5 +21,5 @@ if($email != NULL) {
 }
 
 // Redirect to
-header("Location:index.html");
+header("Location:thankyouformessage.html");
 ?>
