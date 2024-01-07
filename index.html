@@ -41,10 +41,26 @@
             background-color: #ddd;
             color: black;
         }
+        .download-button {
+        background-color: greenyellow;
+        color: black;
+        font-weight: bold;
+        padding: 20px 20px 10px; /* Adjust the padding values as needed */
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        display: block;
+        margin: 30px auto 0; /* Adjust the margin-top value to create space */
+    }
+
+    .download-button:hover {
+        background-color: yellowgreen;
+    }
 
         .header-image {
             width: 100%;
-            height: 500px; /* Increased header height */
+            height: 600px; /* Increased header height */
             object-fit: cover;
             position: relative;
             z-index: 0;
@@ -129,8 +145,12 @@
 </div>
 
 <div class="header-image">
-    <img src="cover/codeallday.gif" alt="Header Background GIF">
+    <img src="cover/daddyphantom.gif" alt="Header Background GIF">
     <div class="header-text">Rohit Balage</div>
+</div>
+<div class="page-header">
+    <button class="download-button" onclick="downloadResume()">Download Resume</button>
+
 </div>
 
 <section>
@@ -162,5 +182,21 @@
     <p>Designed by Rohit Balage</p>
 </footer>
 
+<script>
+    function downloadResume() {
+        var resumePath = 'resume/resume_jan.pdf';
+        var downloadLink = document.createElement('a');
+        downloadLink.href = resumePath;
+        downloadLink.download = 'resume'; // Set the desired file name
+        document.body.appendChild(downloadLink);
+        downloadLink.click();
+        document.body.removeChild(downloadLink);
+    }
+</script>
+
 </body>
+
+
+
 </html>
+
