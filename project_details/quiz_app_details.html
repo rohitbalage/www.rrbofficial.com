@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+  <style>
+    body {
+      background-color: #000; /* Set your desired background color */
+    }
+
+    .page-header, .page-footer {
+      text-align: center;
+      color: greenyellow; /* Set the header and footer text color to greenyellow */
+      background-color: #000; /* Set the header and footer background color to black */
+      padding: 20px 0; /* Add padding above and below the header/footer */
+    }
+
+    .footer-nav {
+      display: flex;
+      justify-content: center;
+    }
+
+    .footer-nav a {
+      color: greenyellow;
+      margin: 0 15px;
+      text-decoration: none;
+    }
+
+    .footer-nav a:hover {
+      text-decoration: underline;
+    }
+
+    .project-cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px; /* Add gap between project cards */
+      margin-top: 20px; /* Add margin-top to separate from the header */
+    }
+
+    .card {
+      background-color: #000;
+      color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(255, 255, 255, 0.5); /* White box-shadow */
+      margin-bottom: 20px;
+      width: calc(50% - 20px); /* Set the width of each card to 50% with a gap of 20px */
+      position: relative;
+      height: 300px; /* Default height for cards */
+    }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Black box-shadow for elevation */
+      border-radius: 10px;
+      z-index: -1;
+    }
+
+    .card-title {
+      color: #6aff6a; /* Set your desired font color */
+      font-size: 18px; /* Set your desired font size for the title */
+      text-align: center;
+      padding-top: 10px; /* Add padding to center the title vertically */
+    }
+
+    .card .content {
+      width: 100%;
+      height: 100%;
+      border-radius: 10px 10px 0 0; /* Add border-radius only to the top of the content */
+      overflow: hidden;
+    }
+
+    .card img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+
+    .card .youtube-video {
+      width: 100%;
+      height: 100%;
+      border-radius: 10px 10px 0 0; /* Add border-radius only to the top of the video player */
+    }
+
+    .project-description {
+      color: #ccc; /* Set your desired font color for the project description */
+      margin-top: 20px; /* Add margin-top for separation from project images */
+      text-align: left; /* Align the project description text */
+      padding: 0 20px; /* Add padding to the project description */
+    }
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .tab-bar {
+      display: flex;
+      justify-content: center;
+      background-color: black;
+      padding: 10px;
+    }
+
+    .tab {
+      padding: 10px 20px;
+      margin: 0 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .tab:hover {
+      background-color: yellowgreen;
+    }
+
+    .content {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #111;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(255, 255, 255, 0.5);
+    }
+
+    .image-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .image {
+      width: calc(10% - 10px); /* Set the width to 10% with a gap of 10px */
+      margin-bottom: 10px;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .image img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    
+  </style>
+
+  <title>Quiz App rohitbalage</title>
+</head>
+<body>
+
+<div class="container mt-4">
+  <div class="page-header">
+    <h1>Quiz App</h1>
+  </div>
+  
+  <div class="project-cards">
+    <!-- Project Card with YouTube Video -->
+    <div class="card">
+      <div class="youtube-video">
+        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/5A-g7SyFbZE" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <div class="card-title">Video Demonstration for Project</div>
+    </div>
+
+    <!-- Project Card with Image 
+    <div class="card">
+      <div class="content">
+        <img src="path/to/your-image.jpg" class="img-fluid" alt="Project Image">
+      </div>
+      <div class="card-title">Project with Image</div>
+    </div>
+-->
+  </div>
+
+
+  <!-- TAB BAR Begins here-->
+
+<div class="tab-bar">
+    <div class="tab" onclick="showContent('project-details')">Project Details</div>
+    <div class="tab" onclick="showContent('images')">Images</div>
+    <div class="tab" onclick="showContent('technology-used')">Technology Used</div>
+    <div class="tab" onclick="showContent('github')">GitHub</div>
+  </div>
+  
+  <div class="content" id="project-details">
+    <!-- Content for Project Details tab -->
+    <h2>Project Details</h2>
+    <div class="project-description">
+        <p>
+            What is Lorem Ipsum?
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            
+            Why do we use it?
+            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+            
+            
+            Where does it come from?
+            Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+            
+            The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
+            
+            Where can I get some?
+            There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
+        </p>
+      </div>
+  </div>
+  
+  <div class="content" id="images" style="display: none;">
+    <!-- Content for Images tab -->
+    <h2>Images</h2>
+    <div class="image-container">
+      <!-- Replace the placeholder image paths with your own -->
+      <div class="image"><img src="images/project_details/quiz_app/1.png" alt="Image 1"></div>
+      <div class="image"><img src="images/project_details/quiz_app/2.png" alt="Image 2"></div>
+      <!-- Add more images as needed -->
+    </div>
+  </div>
+  <div class="content" id="technology-used" style="display: none;">
+    <!-- Content for Technology Used tab -->
+    <h2>Technology Used</h2>
+    <p>List the technologies used in your project here.</p>
+  </div>
+  
+  <div class="content" id="github" style="display: none;">
+    <!-- Content for GitHub tab -->
+    <h2>GitHub</h2>
+    <a href="https://github.com/rohitbalage/trivia_app_android_and_volley">View on GitHub</a>
+  </div>
+  
+  <script>
+    function showContent(tabId) {
+      // Hide all content divs
+      document.querySelectorAll('.content').forEach(function (content) {
+        content.style.display = 'none';
+      });
+  
+      // Show the selected content div
+      document.getElementById(tabId).style.display = 'block';
+    }
+  </script>
+<div class="page-footer">
+  <nav class="footer-nav">
+    <a href="index.html">Home</a>
+    <a href="https://github.com/rohitbalage">GitHub</a>
+    <a href="https://play.google.com/store/apps/dev?id=7820001253688402806">Playstore</a>
+    <a href="privacy_policy.html">Privacy policy</a>
+  </nav>
+</div>
+
+</body>
+</html>
