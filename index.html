@@ -184,10 +184,10 @@
 
 <script>
     function downloadResume() {
-        var resumePath = 'resume/resume_jan.pdf';
+        var resumePath = 'resume/resume.pdf';
         var downloadLink = document.createElement('a');
         downloadLink.href = resumePath;
-        downloadLink.download = 'resume'; // Set the desired file name
+        downloadLink.download = 'Resume_Rohit_Balage'; // Set the desired file name
         document.body.appendChild(downloadLink);
         downloadLink.click();
         document.body.removeChild(downloadLink);
