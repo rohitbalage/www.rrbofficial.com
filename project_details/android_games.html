@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+  <style>
+    .image button {
+    background-color: yellowgreen;
+    color: black;
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 8px;
+  }
+
+  .image button:hover {
+    background-color: limegreen;
+  }
+    body {
+      background-color: #000; /* Set your desired background color */
+    }
+
+    .page-header, .page-footer {
+      text-align: center;
+      color: greenyellow; /* Set the header and footer text color to greenyellow */
+      background-color: #000; /* Set the header and footer background color to black */
+      padding: 20px 0; /* Add padding above and below the header/footer */
+    }
+
+    .footer-nav {
+      display: flex;
+      justify-content: center;
+    }
+
+    .footer-nav a {
+      color: greenyellow;
+      margin: 0 15px;
+      text-decoration: none;
+    }
+
+    .footer-nav a:hover {
+      text-decoration: underline;
+    }
+
+    .project-cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px; /* Add gap between project cards */
+      margin-top: 20px; /* Add margin-top to separate from the header */
+    }
+
+    .card {
+      background-color: #000;
+      color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(255, 255, 255, 0.5); /* White box-shadow */
+      margin-bottom: 20px;
+      width: calc(50% - 20px); /* Set the width of each card to 50% with a gap of 20px */
+      position: relative;
+      height: 300px; /* Default height for cards */
+    }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Black box-shadow for elevation */
+      border-radius: 10px;
+      z-index: -1;
+    }
+
+    .card-title {
+      color: #6aff6a; /* Set your desired font color */
+      font-size: 18px; /* Set your desired font size for the title */
+      text-align: center;
+      padding-top: 10px; /* Add padding to center the title vertically */
+    }
+
+    .card .content {
+      width: 100%;
+      height: 100%;
+      border-radius: 10px 10px 0 0; /* Add border-radius only to the top of the content */
+      overflow: hidden;
+    }
+
+    .card img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+
+    .card .youtube-video {
+      width: 100%;
+      height: 100%;
+      border-radius: 10px 10px 0 0; /* Add border-radius only to the top of the video player */
+    }
+
+    .project-description {
+      color: #ccc; /* Set your desired font color for the project description */
+      margin-top: 20px; /* Add margin-top for separation from project images */
+      text-align: left; /* Align the project description text */
+      padding: 0 20px; /* Add padding to the project description */
+    }
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .tab-bar {
+      display: flex;
+      justify-content: center;
+      background-color: black;
+      padding: 10px;
+    }
+
+    .tab {
+      padding: 10px 20px;
+      margin: 0 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .tab:hover {
+      background-color: yellowgreen;
+    }
+
+    .content {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #111;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(255, 255, 255, 0.5);
+    }
+
+    .image-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .image {
+      width: calc(10% - 10px); /* Set the width to 10% with a gap of 10px */
+      margin-bottom: 10px;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .image img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    
+  </style>
+
+  <title>Android Games</title>
+</head>
+<body>
+
+<div class="container mt-4">
+  <div class="page-header">
+    <h1>Android Games: Retro snake, save the bunny, Space shooter game</h1>
+  </div>
+  
+  <div class="project-cards">
+    <!-- Project Card with YouTube Video -->
+    <div class="card">
+      <div class="youtube-video">
+        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/md3v41HlkB8" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <div class="card-title">Video Demonstration for Project</div>
+    </div>
+
+    <!-- Project Card with Image 
+    <div class="card">
+      <div class="content">
+        <img src="path/to/your-image.jpg" class="img-fluid" alt="Project Image">
+      </div>
+      <div class="card-title">Project with Image</div>
+    </div>
+-->
+  </div>
+
+
+  <!-- TAB BAR Begins here-->
+
+<div class="tab-bar">
+    <div class="tab" onclick="showContent('project-details')">Project Details</div>
+    <div class="tab" onclick="showContent('images')">Images</div>
+    <div class="tab" onclick="showContent('technology-used')">Technology Used</div>
+    <div class="tab" onclick="showContent('github')">GitHub</div>
+  </div>
+  
+  <div class="content" id="project-details">
+    <!-- Content for Project Details tab -->
+    <h2>Project Details</h2>
+    <div class="project-description">
+      
+        <p>
+This section will be updated soon.
+        </p>
+      </div>
+  </div>
+  
+  <div class="content" id="images" style="display: none;">
+    <!-- Content for Images tab -->
+    <h2>Images</h2>
+    <div class="image-container">
+      <!-- Adjust the image paths based on your directory structure -->
+      <div class="image">
+        <img src="../images/pdetailsimages/schitayu/appintro.jpg" alt="Image 1">
+        <button onclick="viewImage('../images/pdetailsimages/schitayu/appintro.jpg')">View</button>
+      </div>
+
+      <div class="image">
+        <img src="../images/pdetailsimages/schitayu/aboutus.jpg" alt="Image 1">
+        <button onclick="viewImage('../images/pdetailsimages/schitayu/aboutus.jpg')">View</button>
+      </div>
+
+      <div class="image">
+        <img src="../images/pdetailsimages/schitayu/boommenu.jpg" alt="Image 1">
+        <button onclick="viewImage('../images/pdetailsimages/schitayu/boommenu')">View</button>
+      </div>
+      <div class="image">
+        <img src="../images/pdetailsimages/schitayu/call.jpg" alt="Image 1">
+        <button onclick="viewImage('../images/pdetailsimages/schitayu/call.jpg')">View</button>
+      </div>
+
+      <div class="image">
+        <img src="../images/pdetailsimages/schitayu/camera.jpg" alt="Image 1">
+        <button onclick="viewImage('../images/pdetailsimages/schitayu/camera.jpg')">View</button>
+      </div>
+
+      <div class="image">
+        <img src="../images/pdetailsimages/schitayu/dev1.jpg" alt="Image 1">
+        <button onclick="viewImage('../images/pdetailsimages/schitayu/dev1')">View</button>
+      </div>
+
+      <div class="image">
+        <img src="../images/pdetailsimages/schitayu/error.jpg" alt="Image 1">
+        <button onclick="viewImage('../images/pdetailsimages/schitayu/error.jpg')">View</button>
+      </div>
+
+      <div class="image">
+        <img src="../images/pdetailsimages/schitayu/esocial2.jpg" alt="Image 1">
+        <button onclick="viewImage('../images/pdetailsimages/schitayu/esocial2.jpg')">View</button>
+      </div>
+
+      <div class="image">
+        <img src="../images/pdetailsimages/schitayu/facebook.jpg" alt="Image 1">
+        <button onclick="viewImage('../images/pdetailsimages/schitayu/facebook.jpg')">View</button>
+      </div>
+
+      <div class="image">
+        <img src="../images/pdetailsimages/schitayu/feedback.jpg" alt="Image 1">
+        <button onclick="viewImage('../images/pdetailsimages/schitayu/feedback.jpg')">View</button>
+      </div>
+
+      <div class="image">
+        <img src="../images/pdetailsimages/schitayu/flashight.jpg" alt="Image 1">
+        <button onclick="viewImage('../images/pdetailsimages/schitayu/flashight.jpg')">View</button>
+      </div>
+
+      <div class="image">
+        <img src="../images/pdetailsimages/schitayu/gcoea.jpg" alt="Image 1">
+        <button onclick="viewImage('../images/pdetailsimages/schitayu/gcoea.jpg')">View</button>
+      </div>
+     
+
+      <div class="image">
+        <img src="../images/pdetailsimages/schitayu/inbpx.jpg" alt="Image 1">
+        <button onclick="viewImage('../images/pdetailsimages/schitayu/inbpx.jpg')">View</button>
+      </div>
+
+      <div class="image">
+        <img src="../images/pdetailsimages/schitayu/mainactivity.jpg" alt="Image 1">
+        <button onclick="viewImage('../images/pdetailsimages/schitayu/mainactivity.jpg')">View</button>
+      </div>
+
+      <div class="image">
+        <img src="../images/pdetailsimages/schitayu/music.jpg" alt="Image 1">
+        <button onclick="viewImage('../images/pdetailsimages/schitayu/music.jpg')">View</button>
+      </div>
+
+      <div class="image">
+        <img src="../images/pdetailsimages/schitayu/mydevice.jpg" alt="Image 1">
+        <button onclick="viewImage('../images/pdetailsimages/schitayu/mydevice.jpg')">View</button>
+      </div>
+
+      <div class="image">
+        <img src="../images/pdetailsimages/schitayu/mydeviceinfo.jpg" alt="Image 1">
+        <button onclick="viewImage('../images/pdetailsimages/schitayu/mydeviceinfo.jpg')">View</button>
+      </div>
+
+      <div class="image">
+        <img src="../images/pdetailsimages/schitayu/navigation.jpg" alt="Image 1">
+        <button onclick="viewImage('../images/pdetailsimages/schitayu/navigation.jpg')">View</button>
+      </div>
+
+      <div class="image">
+        <img src="../images/pdetailsimages/schitayu/pattern.jpg" alt="Image 1">
+        <button onclick="viewImage('../images/pdetailsimages/schitayu/pattern.jpg')">View</button>
+      </div>
+
+
+      <div class="image">
+        <img src="../images/pdetailsimages/schitayu/pdfcreator.jpg" alt="Image 1">
+        <button onclick="viewImage('../images/pdetailsimages/schitayu/pdfcreator.jpg')">View</button>
+      </div>
+
+      <div class="image">
+        <img src="../images/pdetailsimages/schitayu/privatenotes.jpg" alt="Image 1">
+        <button onclick="viewImage('../images/pdetailsimages/schitayu/privatenotes.jpg')">View</button>
+      </div>
+
+      <div class="image">
+        <img src="../images/pdetailsimages/schitayu/qrscanner.jpg" alt="Image 1">
+        <button onclick="viewImage('../images/pdetailsimages/schitayu/qrscanner.jpg')">View</button>
+      </div>
+
+      <div class="image">
+        <img src="../images/pdetailsimages/schitayu/SMS.jpg" alt="Image 1">
+        <button onclick="viewImage('../images/pdetailsimages/schitayu/SMS.jpg')">View</button>
+      </div>
+
+      <div class="image">
+        <img src="../images/pdetailsimages/schitayu/splash.jpg" alt="Image 1">
+        <button onclick="viewImage('../images/pdetailsimages/schitayu/splash.jpg')">View</button>
+      </div>
+
+      <div class="image">
+        <img src="../images/pdetailsimages/schitayu/status.jpg" alt="Image 1">
+        <button onclick="viewImage('../images/pdetailsimages/schitayu/splash.jpg')">View</button>
+      </div>
+
+      <div class="image">
+        <img src="../images/pdetailsimages/schitayu/storeaddon.jpg" alt="Image 1">
+        <button onclick="viewImage('../images/pdetailsimages/schitayu/storeaddon.jpg')">View</button>
+      </div>
+
+      <div class="image">
+        <img src="../images/pdetailsimages/schitayu/updatenotes.jpg" alt="Image 1">
+        <button onclick="viewImage('../images/pdetailsimages/schitayu/updatenotes.jpg')">View</button>
+      </div>
+
+      <!-- Add more images as needed -->
+    </div>
+  </div>
+  
+
+  
+  <div class="content" id="technology-used" style="display: none;">
+    <!-- Content for Technology Used tab -->
+    <h2>Technologies Used</h2>
+    <p>Android Java, Firebase Cli, Photoshop</p>
+  </div>
+  
+  <div class="content" id="github" style="display: none;">
+    <!-- Content for GitHub tab -->
+    <h2>GitHub</h2>
+    <a href="https://github.com/rohitbalage/Gcoeans-Schitayu" style="color: yellowgreen;">https://github.com/rohitbalage/Gcoeans-Schitayu</a>
+  </div>
+  
+  <script>
+    function showContent(tabId) {
+      // Hide all content divs
+      document.querySelectorAll('.content').forEach(function (content) {
+        content.style.display = 'none';
+      });
+  
+      // Show the selected content div
+      document.getElementById(tabId).style.display = 'block';
+    }
+  </script>
+
+<script>
+    function viewImage(imagePath) {
+      var popup = window.open('', 'Image Popup', 'width=500,height=1000');
+      popup.document.write('<img src="' + imagePath + '" style="width:100%; height:auto;">');
+    }
+  </script>
+
+<div class="page-footer">
+  <nav class="footer-nav">
+    <a href="../index.html">Home</a>
+    <a href="https://github.com/rohitbalage">GitHub</a>
+    <a href="https://play.google.com/store/apps/dev?id=7820001253688402806">Playstore</a>
+    <a href="privacy_policy.html">Privacy policy</a>
+  </nav>
+</div>
+
+</body>
+</html>
